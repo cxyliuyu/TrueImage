@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#555555"
+    tools:context="com.cxyliuyu.www.trueimage.SmallActivity">
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:background="#cccccc"
+                android:layout_width="640px"
+                android:layout_height="1092px">
+                <RelativeLayout
+                    android:id="@+id/small_nav_bar"
+                    android:background="#ffffff"
+                    android:layout_width="match_parent"
+                    android:layout_height="88px"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+                    <ImageView
+                        android:id="@+id/small_top_left"
+                        android:layout_centerVertical="true"
+                        android:background="#ff0000"
+                        android:layout_marginLeft="20px"
+                        android:layout_width="48px"
+                        android:layout_height="48px" />
+                    <ImageView
+                        android:id="@+id/small_top_right"
+                        android:layout_width="48px"
+                        android:layout_height="48px"
+                        android:background="#ff0000"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20px" />
+                    <ImageView
+                        android:id="@+id/small_top_center"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/small_top_right"
+                        android:layout_marginRight="40px"
+                        android:background="#ff0000"
+                        android:layout_width="48px"
+                        android:layout_height="48px" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/small_bottom_bar"
+                    android:background="#ffffff"
+                    android:layout_width="match_parent"
+                    android:layout_height="98px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/tab_home_layout">
+                        <ImageView
+                            android:layout_alignParentTop="true"
+                            android:background="#ff0000"
+                            android:layout_width="48px"
+                            android:layout_height="48px"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/small_tab_home_icon"
+                            android:state_checkable="true" />
+                        <TextView
+                            android:textSize="24px"
+                            android:layout_marginTop="6px"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tab_home_text"
+                            android:text="首页"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/small_tab_home_icon"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/tab_work_layout">
+                        <ImageView
+                            android:background="#ff0000"
+                            android:layout_width="48px"
+                            android:layout_height="48px"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/small_tab_work_icon"
+                            android:state_checkable="true" />
+                        <TextView
+                            android:textSize="24px"
+                            android:layout_marginTop="6px"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tab_work_text"
+                            android:text="工作"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/small_tab_work_icon"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/tab_me_layout">
+                        <ImageView
+                            android:background="#ff0000"
+                            android:layout_width="48px"
+                            android:layout_height="48px"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/small_tab_me_icon"
+                            android:state_checkable="true"/>
+                        <TextView
+                            android:textSize="24px"
+                            android:layout_marginTop="6px"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tab_me_text"
+                            android:text="我的"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/small_tab_me_icon"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_below="@id/small_nav_bar"
+                    android:layout_marginTop="50px"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/small_common1"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginTop="10px"
+                        android:layout_width="50px"
+                        android:layout_height="50px"
+                        android:background="#ff0000" />
+                    <ImageView
+                        android:layout_marginLeft="20px"
+                        android:id="@+id/small_common2"
+                        android:layout_marginTop="10px"
+                        android:layout_width="50px"
+                        android:layout_height="50px"
+                        android:background="#ff0000" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="刷新页面"
+                        android:textSize="35px"
+                        android:id="@+id/small_refresh_button"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="32dp"/>
+                </LinearLayout>
+
+
+                 />
+
+            </RelativeLayout>
+        </ScrollView>
+    </HorizontalScrollView>
+</RelativeLayout>
